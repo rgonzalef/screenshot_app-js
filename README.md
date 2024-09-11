@@ -26,3 +26,7 @@ git clone https://github.com/rgonzalef/screenshot_app-js.git
 ```
 
 ## App
+
+<div align="center">
+<img src="WPSA2.png" alt="start-banner">
+</div>
