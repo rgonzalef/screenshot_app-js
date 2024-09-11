@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot App</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+    <h1>Web Page Screenshot Application</h1>
+    <form id="screenshot-form">
+        <label for="url-input">URL:</label>
+        <input type="text" id="url-input" placeholder="https://www.example.com" required>
+        <br><br>
+        <label for="format-select">Format:</label>
+        <select id="format-select">
+            <option value="png">PNG</option>
+            <option value="pdf">PDF</option>
+        </select>
+        <br><br>
+        <button type="submit">Take Screenshot</button>
+    </form>
+    <div id="message" class="message"></div>
+    <script type="module" src="renderer.js"></script>
+</body>
+
+</html>

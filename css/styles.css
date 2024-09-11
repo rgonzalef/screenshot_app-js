@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.message {
+  margin-top: 20px;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
