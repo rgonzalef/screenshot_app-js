@@ -21,11 +21,11 @@ async function takeScreenshot(url, format) {
     })
 
     page.on('requestfailed', async (request) => {
-      console.error(
-        'Request failed:',
-        request.url(),
-        request.failure().errorText
-      )
+      // console.error(
+      //   'Request failed:',
+      //   request.url(),
+      //   request.failure().errorText
+      // )
     })
 
     const response = await page.goto(url, { waitUntil: 'networkidle2' })
@@ -72,10 +72,10 @@ async function takeScreenshot(url, format) {
       await page.pdf({ path: filePath, format: 'A4' })
     }
 
-    //console.log(`Screenshot saved at ${filePath}`)
+    console.log(`Screenshot saved at ${filePath}`)
     return filePath
   } catch (error) {
-    //console.error('Error:', error.message)
+    console.error('Error:', error.message)
     return null
   } finally {
     if (browser) {

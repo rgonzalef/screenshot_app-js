@@ -20,15 +20,15 @@ function createWindow() {
   //Load  HTML file
   win.loadFile('index.html')
 
-  // Handle loading errors
-  win.webContents.on('did-fail-load', () => {
-    console.error('Error: Could not load HTML file')
-  })
+  // // Handle loading errors
+  // win.webContents.on('did-fail-load', () => {
+  //   console.error('Error: Could not load HTML file')
+  // })
 
-  // Display a message when successfully loaded
-  win.webContents.on('did-finish-load', () => {
-    console.log('HTML file uploaded successfully')
-  })
+  // // Display a message when successfully loaded
+  // win.webContents.on('did-finish-load', () => {
+  //   console.log('HTML file uploaded successfully')
+  // })
 }
 
 app.whenReady().then(createWindow)
@@ -46,7 +46,7 @@ ipcMain.handle('capture-screenshot', async (event, url, format) => {
     const filePath = await takeScreenshot(url, format)
     return { success: true, filePath }
   } catch (error) {
-    console.error('Error capturing screen:', error)
+    //console.error('Error capturing screen:', error)
     return { success: false, message: error.message }
   }
 })
